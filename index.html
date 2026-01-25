@@ -1,145 +1,380 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Shaasan Seva Group</title>
+  <title>Shaasan Seva Group - Sirodi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
   <style>
-    body{
-      margin:0;
-      font-family: 'Segoe UI', sans-serif;
-      background:#f4f7f5;
-      color:#333;
+    :root {
+      --primary: #2e7d32;
+      --secondary: #66bb6a;
+      --light-bg: #f4f7f5;
+      --card-bg: #ffffff;
+      --text-dark: #333;
+      --text-light: #777;
     }
-    .container{
-      max-width:1000px;
-      margin:auto;
-      padding:20px;
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--light-bg);
+      color: var(--text-dark);
+      line-height: 1.6;
     }
-    header{
-      text-align:center;
-      padding:40px 20px;
-      background:linear-gradient(135deg,#2e7d32,#66bb6a);
-      color:white;
-      border-radius:0 0 25px 25px;
+
+    /* Top Religious Text */
+    .religious-header {
+      background: #1b5e20;
+      color: #ffd54f; /* Gold color for religious text */
+      text-align: center;
+      padding: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
     }
-    header img{
-      width:130px;
-      margin-bottom:15px;
-      background:white;
-      padding:8px;
-      border-radius:50%;
+
+    /* Main Header */
+    header {
+      text-align: center;
+      padding: 40px 20px 60px 20px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      border-radius: 0 0 30px 30px;
+      box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
     }
-    header h1{margin:10px 0 5px;}
-    header p{font-size:18px; letter-spacing:1px;}section{
-  background:white;
-  padding:25px;
-  margin:25px 0;
-  border-radius:15px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.05);
-}
-h2{
-  color:#2e7d32;
-  margin-bottom:15px;
-}
 
-.motto span{
-  display:inline-block;
-  background:#e8f5e9;
-  padding:10px 16px;
-  margin:6px;
-  border-radius:25px;
-  font-weight:500;
-}
+    header img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      background: white;
+      padding: 5px;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
 
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:15px;
-}
+    /* SIRODI Styling */
+    .sirodi-title {
+      font-size: 32px;
+      font-weight: 800;
+      margin: 10px 0 5px 0;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
 
-.card{
-  background:#f9fbf9;
-  padding:15px;
-  border-radius:12px;
-  text-align:center;
-  border:1px solid #e0e0e0;
-}
+    header h1 {
+      margin: 5px 0;
+      font-size: 22px;
+      font-weight: 500;
+      opacity: 0.95;
+    }
 
-footer{
-  text-align:center;
-  padding:20px;
-  color:#777;
-  font-size:14px;
-}
+    header p {
+      font-size: 16px;
+      letter-spacing: 1px;
+      opacity: 0.9;
+      margin-top: 5px;
+    }
 
-iframe{
-  width:100%;
-  height:650px;
-  border:none;
-  border-radius:12px;
-}
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 0 20px;
+      margin-top: -40px; /* Overlap effect */
+    }
 
+    section {
+      background: var(--card-bg);
+      padding: 30px;
+      margin-bottom: 25px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-bottom: 20px;
+      font-weight: 700;
+      border-bottom: 2px solid #e8f5e9;
+      padding-bottom: 10px;
+      display: inline-block;
+    }
+
+    /* Motto Badges */
+    .motto {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .motto span {
+      background: #e8f5e9;
+      color: var(--primary);
+      padding: 8px 18px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 14px;
+      border: 1px solid #c8e6c9;
+    }
+
+    /* Contact Cards */
+    .region-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .region-card {
+      background: #fdfdfd;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+
+    .region-card h3 {
+      margin-top: 0;
+      color: var(--primary);
+      text-transform: uppercase;
+      font-size: 18px;
+      border-bottom: 1px dashed #ccc;
+      padding-bottom: 10px;
+    }
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .contact-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 15px;
+    }
+
+    .contact-item:last-child {
+      border-bottom: none;
+    }
+
+    .contact-name {
+      font-weight: 500;
+      color: #444;
+    }
+
+    .contact-number {
+      font-family: 'Courier New', monospace;
+      font-weight: bold;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    
+    .contact-number:hover {
+      text-decoration: underline;
+    }
+
+    /* Core Activities List */
+    ul.activities {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    ul.activities li {
+      padding: 8px 0;
+      padding-left: 25px;
+      position: relative;
+    }
+    ul.activities li::before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      color: var(--secondary);
+    }
+
+    /* Iframe */
+    iframe {
+      width: 100%;
+      height: 650px;
+      border: none;
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: var(--text-light);
+      font-size: 14px;
+      background: #e8f5e9;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .contact-number {
+        margin-top: 2px;
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
-<body><header>
-  <img src="https://drive.google.com/thumbnail?id=1LBkndJsZbUik7BPe_9C2f7loG5RM5Qnx&sz=w1000" alt="Shaasan Seva Group Logo">
-  <h1>Shaasan Seva Group</h1>
-  <p>Ekta • Manavseva • Jivdaya</p>
-</header><div class="container">  <section>
-    <h2>About Us</h2>
-    <p>
-      Shaasan Seva Group is a community-driven NGO focused on building a disciplined,
-      united, and compassionate society. Inspired by Jain values, we work for humanity,
-      village development, youth connection, and compassion for all living beings.
-    </p>
-  </section>  <section>
-    <h2>Our Motto</h2>
-    <div class="motto">
-      <span>Self Discipline</span>
-      <span>Youth Connectivity</span>
-      <span>Humanity</span>
-    </div>
-  </section>  <section>
-    <h2>Core Activities</h2>
-    <ul>
-      <li><strong>Jivdaya:</strong> Compassion towards all living beings</li>
-      <li><strong>Sangh Seva:</strong> Service to society and community</li>
-      <li><strong>Manav Seva:</strong> Service to humanity</li>
-    </ul>
-  </section>  <section>
-    <h2>Membership</h2>
-    <p>Membership is open to anyone who is <strong>18 years or above</strong> and believes in service, unity, and discipline.</p>
-  </section>  <section>
-    <h2>Active Locations</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Ahmedabad</h3>
-        <p>Sanjay<br>Vishal</p>
+<body>
+
+  <div class="religious-header">
+    || SHREE GODI PARSHWANATHAYA NAMAH ||
+  </div>
+
+  <header>
+    <img src="https://drive.google.com/thumbnail?id=1LBkndJsZbUik7BPe_9C2f7loG5RM5Qnx&sz=w1000" alt="Shaasan Seva Group Logo">
+    
+    <div class="sirodi-title">SIRODI</div>
+    
+    <h1>Shaasan Seva Group</h1>
+    <p>Ekta • Manavseva • Jivdaya</p>
+  </header>
+
+  <div class="container">
+    
+    <section>
+      <h2>About Us</h2>
+      <p>
+        Shaasan Seva Group (Sirodi) is a community-driven NGO focused on building a disciplined,
+        united, and compassionate society. Inspired by Jain values, we work for humanity,
+        village development, youth connection, and compassion for all living beings.
+      </p>
+    </section>
+
+    <section>
+      <h2>Our Motto</h2>
+      <div class="motto">
+        <span>Self Discipline</span>
+        <span>Youth Connectivity</span>
+        <span>Humanity</span>
       </div>
-      <div class="card">
-        <h3>Surat</h3>
-        <p>Preetam<br>Jayesh</p>
+    </section>
+
+    <section>
+      <h2>Committee Members & Contacts</h2>
+      <div class="region-grid">
+        
+        <div class="region-card">
+          <h3>Gujarat</h3>
+          <ul class="contact-list">
+            <li class="contact-item">
+              <span class="contact-name">Sanjay R. Jain</span>
+              <a href="tel:9904044994" class="contact-number">99040 44994</a>
+            </li>
+            <li class="contact-item">
+              <span class="contact-name">Vishal K. Jain</span>
+              <a href="tel:9427704697" class="contact-number">94277 04697</a>
+            </li>
+            <li class="contact-item">
+              <span class="contact-name">Preetam Jain</span>
+              <a href="tel:9448337403" class="contact-number">94483 37403</a>
+            </li>
+            <li class="contact-item">
+              <span class="contact-name">Jayesh Jain</span>
+              <a href="tel:9727776633" class="contact-number">97277 76633</a>
+            </li>
+            <li class="contact-item">
+              <span class="contact-name">Bharat Jain</span>
+              <a href="tel:9825120657" class="contact-number">98251 20657</a>
+            </li>
+            <li class="contact-item">
+              <span class="contact-name">Pinkesh Jain</span>
+              <a href="tel:9461449803" class="contact-number">94614 49803</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="region-card">
+          <h3>Maharashtra</h3>
+          <ul class="contact-list">
+            <li class="contact-item">
+              <span class="contact-name">Mahaveer C. Jain</span>
+              <a href="tel:9969307481" class="contact-number">99693 07481</a>
+            </li>
+            <li class="contact-item">
+              <span class="contact-name">Urvesh B. Jain</span>
+              <a href="tel:9699814881" class="contact-number">96998 14881</a>
+            </li>
+            <li class="contact-item">
+              <span class="contact-name">Kumar Jain</span>
+              <a href="tel:9326997120" class="contact-number">93269 97120</a>
+            </li>
+            <li class="contact-item">
+              <span class="contact-name">Mahesh B. Jain</span>
+              <span class="contact-number">-</span>
+            </li>
+            <li class="contact-item">
+              <span class="contact-name">Lucky P. Jain</span>
+              <span class="contact-number">-</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="region-card">
+          <h3>South</h3>
+          <ul class="contact-list">
+            <li class="contact-item">
+              <span class="contact-name">Vinit Jain</span>
+              <a href="tel:9825376277" class="contact-number">98253 76277</a>
+            </li>
+            <li class="contact-item">
+              <span class="contact-name">Pranay A. Jain</span>
+              <a href="tel:9160008814" class="contact-number">91600 08814</a>
+            </li>
+            <li class="contact-item">
+              <span class="contact-name">Hiten V. Jain</span>
+              <a href="tel:9963333230" class="contact-number">99633 33230</a>
+            </li>
+            <li class="contact-item">
+              <span class="contact-name">Mitesh</span>
+              <a href="tel:9480068458" class="contact-number">94800 68458</a>
+            </li>
+          </ul>
+        </div>
+
       </div>
-      <div class="card">
-        <h3>Mumbai</h3>
-        <p>Uvesh B. Jain</p>
-      </div>
-      <div class="card">
-        <h3>South</h3>
-        <p>Active Soon</p>
-      </div>
-    </div>
-  </section>  <section>
-    <h2>Join Us</h2>
-    <p>Fill out the form below to become a member or register for our services.</p>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScuvQDKNVpcxlbL3DCkEqqkJxK_HDhftS-VieC6GwPeiOt_mA/viewform?embedded=true"
-  width="100%" 
-  height="700" 
-  frameborder="0" 
-  marginheight="0" 
-  marginwidth="0">
-Loading… </iframe>
-  </section></div><footer>
-  © 2026 Shaasan Seva Group | Ekta • Manavseva • Jivdaya
-</footer></body>
+    </section>
+
+    <section>
+      <h2>Core Activities</h2>
+      <ul class="activities">
+        <li><strong>Jivdaya:</strong> Compassion towards all living beings</li>
+        <li><strong>Sangh Seva:</strong> Service to society and community</li>
+        <li><strong>Manav Seva:</strong> Service to humanity</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Membership</h2>
+      <p>Membership is open to anyone who is <strong>18 years or above</strong> and believes in service, unity, and discipline.</p>
+    </section>
+
+    <section>
+      <h2>Join Us</h2>
+      <p>Fill out the form below to become a member or register for our services.</p>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScuvQDKNVpcxlbL3DCkEqqkJxK_HDhftS-VieC6GwPeiOt_mA/viewform?embedded=true">
+        Loading… 
+      </iframe>
+    </section>
+
+  </div>
+
+  <footer>
+    © 2026 Shaasan Seva Group (Sirodi) | Ekta • Manavseva • Jivdaya
+  </footer>
+
+</body>
 </html>
